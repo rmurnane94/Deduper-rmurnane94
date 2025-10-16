@@ -16,6 +16,15 @@ UMI - column 1
 UMIs will be checked against those in the STL96.txt file, and reads with unknown UMIs will be thrown out.  
 Check to find read duplicates based on the criteria above, if all criteria match, keep only one
 
+#### for examples:
+first one,
+duplicate,
+unknown UMI,
+different, but known UMI,
+different chromosome,
+different 5' start,
+different strand
+
 
 ## Pseudocode:
 samtools sort the file to make it easier to navigate as potential duplicates will be sequential
@@ -58,6 +67,7 @@ example get_strand(0) -> +
   
       
   
+
 
 
 
