@@ -29,9 +29,9 @@ if header "@" lines: add to the new file. these stay the same.
 
 for data lines with read/alignment information:  
   strip and split on tabs as delimiter. save to a list to make it accessible.  
-  -save UMI (last characters of column 1)
-  -get chromosome number (column 3) as variable
-  -calculate/get 5' start (use function with info from 5 and 6) as a variable  
+  -save UMI (last characters of column 1)  
+  -get chromosome number (column 3) as variable  
+  -calculate/get 5' start (use function with info from 5 and 6) as a variable    
   -detect strand (use function on column 2), can also save as variable  
 
   save these 4 pieces to a new list for this read
@@ -56,6 +56,7 @@ example get_strand(0) -> +
   
       
   
+
 
 
 
