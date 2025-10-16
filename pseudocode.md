@@ -28,7 +28,7 @@ different strand
 
 
 ## Pseudocode:
-samtools sort the file to make it easier to navigate as potential duplicates will be sequential
+samtools sort the file to make it easier to navigate potential duplicates
 
 make an empty variable to hold the information of the previous read so that reads can be compared
 
@@ -68,6 +68,7 @@ example get_strand(0) -> +
   
       
   
+
 
 
 
