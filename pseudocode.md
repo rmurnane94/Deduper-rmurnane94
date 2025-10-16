@@ -6,7 +6,7 @@ By comparing defining characteristics in a SAM file, they can be idenfitied and 
 same alignment position as noted by chromosome, 5' start of read, strand  
 same UMI
 
-### Where elements are located:
+### where elements are located:
 chromosome number - column 3  
 5' start of read - combines position from column 5 along with CIGAR info from column 6  
 strand - column 2 (FLAG)  
@@ -52,10 +52,13 @@ get_strand(FLAG (int) ) -> str:
 return +/-  
 example get_strand(0) -> +
   
-  
+
+
+
   
       
   
+
 
 
 
