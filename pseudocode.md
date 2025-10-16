@@ -13,8 +13,8 @@ strand - column 2 (FLAG)
 UMI - column 1
 
 ### what to do:
-Known UMIs will be taken and checked from the STL96.txt file, and unknown ones will be thrown out.
-Check to find duplicates based on the criteria above, if all criteria match, keep only one
+UMIs will be checked against those in the STL96.txt file, and reads with unknown UMIs will be thrown out.  
+Check to find read duplicates based on the criteria above, if all criteria match, keep only one
 
 
 ## Pseudocode:
@@ -22,11 +22,15 @@ Check to find duplicates based on the criteria above, if all criteria match, kee
 Open the SAM file to read. Open new output file to write to. 
 go through lines in read file
   
-for header "@" lines: add to new file.
+for header "@" lines: add to new file. these stay the same.
       
-for data lines with read/alignment information:
+for data lines with read/alignment information:  
+  strip and split on tabs as delimiter  
+  check UMI against file  
+    if it is unknown, skip
   
       
   
+
 
 
