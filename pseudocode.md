@@ -19,13 +19,14 @@ Check to find duplicates based on the criteria above, if all criteria match, kee
 
 ## Pseudocode:
 
-Open the SAM file to read. Open new output file to write to.
-  go through lines in read file
+Open the SAM file to read. Open new output file to write to. 
+go through lines in read file
   
-    for header "@" lines: 
-      add to new file.
+for header "@" lines: add to new file.
       
-    for data lines with read/alignment information
+for data lines with read/alignment information:
+  
       
   
+
 
