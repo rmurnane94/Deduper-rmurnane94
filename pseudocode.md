@@ -16,13 +16,14 @@ UMI - column 1
 UMIs will be checked against those in the STL96.txt file, and reads with unknown UMIs will be thrown out.  
 Check to find read duplicates based on the criteria above, if all criteria match, keep only one
 
-#### for examples:
-first one,
+## Examples located [HERE](example_files)
+#### for examples (8 total):
+original,
 duplicate,
 unknown UMI,
-different, but known UMI,
+different but known UMI,
 different chromosome,
-different 5' start,
+different 5' start(pos and cigar),
 different strand
 
 
@@ -49,7 +50,7 @@ for data lines with read/alignment information:
 
   update the previous read list to the new read list
   
-### functions:
+## functions:
 
 This function calculates the 5' start for reads using the POS and CIGAR:  
 get_read_start(position (int), CIGAR (str)) -> int:  
@@ -67,6 +68,7 @@ example get_strand(0) -> +
   
       
   
+
 
 
 
