@@ -105,30 +105,6 @@ GAACAGGT
 
 ---
 
-## **File Structure**
-```
-Deduper-rmurnane94/
-│
-├── murnane_deduper.py
-├── README.md
-├── data/
-│   ├── umi_whitelist.txt
-│   ├── example_input.sorted.sam
-│   └── example_output.sam
-└── tests/
-    └── unit_tests.md
-```
-
----
-
-## **Challenge Branch (Optional Enhancements)**
-- Paired-end deduplication
-- Randomer UMI support
-- UMI error correction
-- Duplicate retention policy options
-
----
-
 ## **Limitations**
 - Only **single-end** reads supported in the main version
 - Requires **pre-sorted SAM**
