@@ -70,7 +70,7 @@ Reads marked unmapped (0x4), secondary (0x100), or supplementary (0x800) are ign
 
 ### **Example command:**
 ```bash
-./<your_last_name>_deduper.py -u STL96.txt -f input.sorted.sam -o output.deduped.sam
+./murnane_deduper.py -u STL96.txt -f input.sorted.sam -o output.deduped.sam
 ```
 
 ---
@@ -107,9 +107,9 @@ GAACAGGT
 
 ## **File Structure**
 ```
-Deduper-<github-user-name>/
+Deduper-rmurnane94/
 │
-├── <your_last_name>_deduper.py
+├── murnane_deduper.py
 ├── README.md
 ├── data/
 │   ├── umi_whitelist.txt
