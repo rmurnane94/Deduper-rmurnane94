@@ -1,6 +1,6 @@
 # **PCR Duplicate Removal Tool (UMI‑Aware, Single‑End)**
-### **Author:** <Your Name>
-### **Script:** `<your_last_name>_deduper.py`
+### **Author:** Ryan Murnane
+### **Script:** `murnane_deduper.py`
 ### **Python Version:** **3.12**
 
 ---
