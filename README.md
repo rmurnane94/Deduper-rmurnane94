@@ -1,3 +1,60 @@
+# PCR Duplicate Removal Tool (UMI‑Aware, Single‑End)
+### Author: <Your Name>  
+### Script: `<your_last_name>_deduper.py`  
+### Python Version: **3.12**
+
+---
+
+## Overview
+
+This repository contains a Python-based tool for **reference-based PCR duplicate removal** for **single-end sequencing reads** containing **known UMIs** in the read name (QNAME). The tool operates on **coordinate‑sorted SAM files of uniquely mapped reads**, identifies duplicate reads using genomic position, strand, and UMI, and outputs a **properly formatted deduplicated SAM file**.
+
+The workflow is fully **streamed**, meaning the script never loads the entire SAM file into memory. This enables efficient handling of **millions of reads**.
+
+---
+
+## What This Tool Does
+
+- Performs **PCR duplicate removal using UMIs**
+- Computes **5′ genomic position** accurately using:
+  - Strand (+ / –)
+  - All CIGAR operations  
+  - Proper handling of **soft clipping**
+- Uses **known UMIs** provided via a whitelist file
+- Supports **single-end reads** (paired-end in optional branch)
+- Keeps the **first read encountered** when duplicates are found
+- Streams input for **low memory usage**
+- Outputs a valid, fully formatted **SAM file**
+
+---
+
+## How Duplicate Reads Are Identified
+
+Two reads are considered duplicates if they share:
+
+1. **Chromosome (RNAME)**
+2. **Strand**  
+   - Determined by FLAG bit 0x10
+3. **5′ Genomic Position**  
+   - `+` strand: `POS`  
+   - `–` strand: `POS + reference_consuming_length - 1`
+4. **UMI**  
+   - Extracted from the final colon-delimited field of QNAME
+
+Reads with UMIs not in the whitelist are **discarded** unless error correction is implemented in an optional branch.
+
+---
+
+## Input Requirements
+
+- **Sorted SAM file**  
+  If unsorted, use:
+  ```bash
+  samtools sort -o input.sorted.sam input.sam
+
+
+
+
 # Deduper
 
 ## Part 1
