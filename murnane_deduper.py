@@ -156,11 +156,3 @@ with open('deduper_stats.txt', 'w') as stats_file:
     print(f'wrong umis: {wrong_umis}', file = stats_file)
     print(f'duplicates removed: {duplicates_removed}', file = stats_file)
 
-
-
-
-        #where do i want to add the periodical empytying of the read checker??
-       
-
-        #double check that line column numbers are correct for each piece of information
-        #double check flag fxn
